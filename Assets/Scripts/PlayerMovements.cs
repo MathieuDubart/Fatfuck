@@ -8,7 +8,6 @@ public class PlayerMovements : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private float sidewayForce = 5f;
 
-    private float horizontalAxis = 0f;
     Camera cam;
     Vector3 pointLeft;
     Vector3 pointRight;
@@ -20,20 +19,11 @@ public class PlayerMovements : MonoBehaviour
 
     private void Update()
     {
-        horizontalAxis = Input.GetAxis("Horizontal");
-    }
+        
 
-
-    void FixedUpdate()
-    {
         // Retrieving left & right points to keep player in camera fov.
         pointLeft = cam.ScreenToWorldPoint(new Vector3(0, 0, 10));
         pointRight = cam.ScreenToWorldPoint(new Vector3(cam.pixelWidth, 0, 10));
-
-        if ((player.transform.position.x > pointLeft.x && horizontalAxis <= 0) || (player.transform.position.x < pointRight.x && horizontalAxis >= 0))
-        {
-            player.transform.position += new Vector3(horizontalAxis * sidewayForce * Time.deltaTime, 0, 0);
-        }
     }
 
     private void OnGUI()
@@ -43,5 +33,13 @@ public class PlayerMovements : MonoBehaviour
         GUILayout.Label("World left position: " + pointLeft.ToString("F3"));
         GUILayout.Label("World right position: " + pointRight.ToString("F3"));
         GUILayout.EndArea();
+    }
+
+    public void MovePlayerWith(float horizontalAxis)
+    {
+        if ((player.transform.position.x > pointLeft.x && horizontalAxis <= 0) || (player.transform.position.x < pointRight.x && horizontalAxis >= 0))
+        {
+            player.transform.position += new Vector3(horizontalAxis * sidewayForce * Time.deltaTime, 0, 0);
+        }
     }
 }
