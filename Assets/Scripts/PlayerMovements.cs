@@ -26,15 +26,6 @@ public class PlayerMovements : MonoBehaviour
         pointRight = cam.ScreenToWorldPoint(new Vector3(cam.pixelWidth, 0, 10));
     }
 
-    private void OnGUI()
-    {
-        GUILayout.BeginArea(new Rect(20, 20, 250, 120));
-        GUILayout.Label("Screen pixels: " + cam.pixelWidth + ":" + cam.pixelHeight);
-        GUILayout.Label("World left position: " + pointLeft.ToString("F3"));
-        GUILayout.Label("World right position: " + pointRight.ToString("F3"));
-        GUILayout.EndArea();
-    }
-
     public void MovePlayerWith(float horizontalAxis)
     {
         if ((player.transform.position.x > pointLeft.x && horizontalAxis <= 0) || (player.transform.position.x < pointRight.x && horizontalAxis >= 0))
@@ -42,4 +33,15 @@ public class PlayerMovements : MonoBehaviour
             player.transform.position += new Vector3(horizontalAxis * sidewayForce * Time.deltaTime, 0, 0);
         }
     }
+
+    /* Uncomment to display debug infos about cam borders.
+     * private void OnGUI()
+    {
+        GUILayout.BeginArea(new Rect(20, 20, 250, 120));
+        GUILayout.Label("Screen pixels: " + cam.pixelWidth + ":" + cam.pixelHeight);
+        GUILayout.Label("World left position: " + pointLeft.ToString("F3"));
+        GUILayout.Label("World right position: " + pointRight.ToString("F3"));
+        GUILayout.EndArea();
+    }
+    */
 }
