@@ -10,6 +10,7 @@ public class InputController : BaseController<InputController>
     public event InputEvent OnTogglePause;
     public PlayerMovements pm;
 
+    
     private float horizontalAxis = 0f;
     public void Update()
     {

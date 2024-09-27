@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class TimeController : BaseController<TimeController >
+public class TimeController : BaseController<TimeController>
 
 {
     public TMPro.TextMeshProUGUI timerText;
@@ -13,7 +13,7 @@ public class TimeController : BaseController<TimeController >
 
 
     public delegate void TimeEvent();
-     public event TimeEvent OnTogglePause;
+     public event TimeEvent OnGameEnded;
 
     // Reference to the GameController
     private GameController gameController;
@@ -38,12 +38,11 @@ public class TimeController : BaseController<TimeController >
             {
                 currentTime = 0;
                 isTimerRunning = false;
-                EndGame();
                 // You can trigger a game over or other event here when the time runs out
             }
             if (currentTime <= 0 )
-                if(this.OnTogglePause != null)
-                    this.OnTogglePause.Invoke();
+                if(this.OnGameEnded != null)
+                    this.OnGameEnded.Invoke();
             // Update the timer display every frame
             UpdateTimerText();
         }
@@ -56,17 +55,17 @@ public class TimeController : BaseController<TimeController >
         UpdateTimerText();  // Update the UI after adding time
     }
 
-     private void EndGame()
-    {
-        // Trigger game over logic in GameController
-        if (gameController != null)
-        {
-            gameController.EndGame(); // Call the EndGame method from GameController
+    //  private void EndGame()
+    // {
+    //     // Trigger game over logic in GameController
+    //     if (gameController != null)
+    //     {
+    //         gameController.EndGame(); // Call the EndGame method from GameController
            
-        }
+    //     }
 
-        Debug.Log("Game Over: Timer has reached 0.");
-    }
+    //     Debug.Log("Game Over: Timer has reached 0.");
+    // }
 
 
     // Updates the UI Text element with the current time
