@@ -17,3 +17,4 @@ MonoBehaviour:
   FruitModel: {fileID: 5614772484018346774, guid: 56400e21a3419e64c9d6c5baf07850ca, type: 3}
   fruitValue: -10
   fruitMultiplier: 0
+  fruitTimeAdding: -1
