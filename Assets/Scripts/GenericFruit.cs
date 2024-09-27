@@ -5,11 +5,12 @@ using UnityEngine;
 public class GenericFruit : MonoBehaviour
 {
     public FruitPreset preset;
-    
     public Autorotate BodyAutorotate;
 
     public GameObject FruitChild;
 
+    [SerializeField]
+    public ScoreController score;
     // Start is called before the first frame update
 
 
@@ -40,5 +41,13 @@ public class GenericFruit : MonoBehaviour
         this.BodyAutorotate.speed = preset.rotateSelfSpeed;
         this.DestroyFruit();
 
+    }
+
+    private void OnCollisionEnter(Collision collisionInfo)
+    {
+        if (collisionInfo.collider.tag == "Player")
+        {
+            score.IncrementBy(preset.fruitValue);
+        }
     }
 }

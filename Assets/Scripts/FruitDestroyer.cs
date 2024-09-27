@@ -5,16 +5,19 @@ using UnityEngine;
 public class FruitDestroyer : MonoBehaviour
 {
 
-    
-    void DestroyFruit (){
-         if (transform.position.y < -5f) {
-         Destroy(gameObject);
-     }
+    void Destroy()
+    {
+        Destroy(gameObject);
     }
+
+ 
 
     // Update is called once per frame
     void Update()
     {
-        DestroyFruit();
+        if (transform.position.y < -5f)
+        {
+            Destroy();
+        }
     }
 }
