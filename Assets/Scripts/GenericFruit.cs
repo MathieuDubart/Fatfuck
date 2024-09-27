@@ -7,11 +7,30 @@ public class GenericFruit : MonoBehaviour
     public FruitPreset preset;
     
     public Autorotate BodyAutorotate;
+
+    public GameObject FruitChild;
+
     // Start is called before the first frame update
+
+
+
+    public void DestroyFruit ()
+    {
+    if( this.FruitChild != null ){
+      if (this.FruitChild.transform.position.y < -5f) 
+         {
+         Destroy(this.gameObject);
+         }
+}
+       
+         
+    }   
+    
     public void Init(FruitPreset newpreset)
     {
         this.preset = newpreset;
-        GameObject.Instantiate(newpreset.FruitModel, BodyAutorotate.transform);
+        this.FruitChild = Instantiate(newpreset.FruitModel, BodyAutorotate.transform);
+        
     }
 
     // Update is called once per frame
@@ -19,7 +38,7 @@ public class GenericFruit : MonoBehaviour
     {
         this.BodyAutorotate.gameObject.transform.localScale = Vector3.one * this.preset.Size;
         this.BodyAutorotate.speed = preset.rotateSelfSpeed;
-        
+        this.DestroyFruit();
 
     }
 }
