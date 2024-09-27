@@ -15,14 +15,17 @@ public class InputController : BaseController<InputController>
     {
         if (Input.GetKeyDown(KeyCode.Space))
             if(this.OnTogglePause != null)
-                this.OnTogglePause();
+                 this.OnTogglePause.Invoke();
                 //GameController.Instance().TogglePause();
 
         horizontalAxis = Input.GetAxis("Horizontal");
+
+    
+       
     }
 
-    public void FixedUpdate()
-    {
-        pm.MovePlayerWith(horizontalAxis);
-    }
+    // public void FixedUpdate()
+    // {
+    //     pm.MovePlayerWith(horizontalAxis);
+    // }
 }

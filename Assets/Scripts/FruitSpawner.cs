@@ -13,7 +13,7 @@ public class ObstacleSpawn : MonoBehaviour
 
     [SerializeField]
     private GenericFruit FruitPrefab;
-
+    
     [SerializeField]
     private float timeFirstWave = 0f;
 
@@ -22,7 +22,7 @@ public class ObstacleSpawn : MonoBehaviour
 
     private float timeToSpawn = float.PositiveInfinity;
 
-
+    private bool isGameOver = false;
     private void Start()
     {
         timeToSpawn = timeFirstWave;
@@ -30,7 +30,14 @@ public class ObstacleSpawn : MonoBehaviour
 
     void Update()
     {
-        if(Time.time >= timeToSpawn)
+       // Check if the game is paused or over before spawning fruits
+        if (Time.timeScale == 0 || isGameOver)
+        {
+            return;  // Do not spawn when the game is paused or over
+        }
+
+        // Continue spawning if the game is running
+        if (Time.time >= timeToSpawn)
         {
             SpawnObstacles();
             timeToSpawn = Time.time + timeBetweenWaves;
