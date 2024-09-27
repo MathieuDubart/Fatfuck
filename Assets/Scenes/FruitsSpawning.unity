@@ -153,7 +153,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1481412487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &409275941
+--- !u!1001 &405217901
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -161,59 +161,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5970264412117580629, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
+    - target: {fileID: 5970264412117580629, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.0877018
       objectReference: {fileID: 0}
-    - target: {fileID: 5970264412117580629, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
+    - target: {fileID: 5970264412117580629, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
       propertyPath: m_LocalPosition.y
       value: -3.3849325
       objectReference: {fileID: 0}
-    - target: {fileID: 5970264412117580629, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
+    - target: {fileID: 5970264412117580629, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
       propertyPath: m_LocalPosition.z
       value: -2.0979471
       objectReference: {fileID: 0}
-    - target: {fileID: 5970264412117580629, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
+    - target: {fileID: 5970264412117580629, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5970264412117580629, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
+    - target: {fileID: 5970264412117580629, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5970264412117580629, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
+    - target: {fileID: 5970264412117580629, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5970264412117580629, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
+    - target: {fileID: 5970264412117580629, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5970264412117580629, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
+    - target: {fileID: 5970264412117580629, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5970264412117580629, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
+    - target: {fileID: 5970264412117580629, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5970264412117580629, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
+    - target: {fileID: 5970264412117580629, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6843350529491094105, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
+    - target: {fileID: 6843350529491094105, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
       propertyPath: m_Name
       value: GenericFruit
       objectReference: {fileID: 0}
-    - target: {fileID: 8742629872948082150, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
-      propertyPath: score
-      value: 
-      objectReference: {fileID: 512448012}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5da9376a1d2cbf343a99ef72866f0aa4, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
 --- !u!1 &512448009
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,9 +219,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 512448011}
-  - component: {fileID: 512448014}
   - component: {fileID: 512448013}
   - component: {fileID: 512448012}
+  - component: {fileID: 512448014}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -257,9 +253,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 512448009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07ddf32582baf8643926999212485b63, type: 3}
+  m_Script: {fileID: 11500000, guid: 35c32f99f9727dd4bb8847932b7c93de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pm: {fileID: 0}
 --- !u!114 &512448013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,7 +266,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 512448009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 236df56717a410647a1e51858529d717, type: 3}
+  m_Script: {fileID: 11500000, guid: 890a6040602a06142a7de6f0ec073fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &512448014
@@ -281,10 +278,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 512448009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5c32916260b917429217da87aa179ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d33e5bb06af74049a92da463ea121ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
 --- !u!1 &1160746855
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +409,7 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 19.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1265859261
@@ -467,7 +463,7 @@ MonoBehaviour:
   FruitPreset:
   - {fileID: 11400000, guid: 4e7d19f828e215f4a9305fc1f239f284, type: 2}
   - {fileID: 11400000, guid: 22192f2710b75e74c8c756d240641e53, type: 2}
-  FruitPrefab: {fileID: 711582224676804699, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
+  FruitPrefab: {fileID: 6523049390427326088, guid: 194e85a904e236b4db3f29e77812eb6f, type: 3}
   timeFirstWave: 0
   timeBetweenWaves: 1
 --- !u!4 &1481412487
@@ -620,4 +616,4 @@ SceneRoots:
   - {fileID: 1481412487}
   - {fileID: 1265859261}
   - {fileID: 512448011}
-  - {fileID: 409275941}
+  - {fileID: 405217901}

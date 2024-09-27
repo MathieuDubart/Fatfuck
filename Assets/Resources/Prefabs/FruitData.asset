@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3590d41c3486104419d69b6249083fd9, type: 3}
   m_Name: FruitData
   m_EditorClassIdentifier: 
-  rotateSelfSpeed: 25.4
-  Size: 0
-  FruitModel: {fileID: 0}
+  rotateSelfSpeed: 47.3
+  Size: 2
+  FruitModel: {fileID: 1385742788442824407, guid: 292933804c5682c498b59080cd02e247, type: 3}
   fruitValue: 0

@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bb0bcd9b8b6a5e4d8dc1e8ab4a9a7ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 3590d41c3486104419d69b6249083fd9, type: 3}
   m_Name: Banana
   m_EditorClassIdentifier: 
-  rotateSelfSpeed: 29.4
+  rotateSelfSpeed: 22.4
   Size: 2
-  FruitModel: {fileID: 8767438992373633386, guid: f3396b1d54dd380409b946c29f45ee6f, type: 3}
+  FruitModel: {fileID: 1385742788442824407, guid: 292933804c5682c498b59080cd02e247, type: 3}
+  fruitValue: 0
