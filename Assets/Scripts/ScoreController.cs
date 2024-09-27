@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class ScoreController : BaseController<ScoreController>
 {
     public int score;
     public float combo;
+    public TMPro.TextMeshProUGUI scoreText;
+    public TMPro.TextMeshProUGUI comboText;
 
     // Start is called before the first frame update
     void Start()
@@ -22,4 +24,9 @@ public class ScoreController : BaseController<ScoreController>
 
     public void ResetScoreAndCombo() { this.score = 0; this.combo = 1; }
 
+    public void Update()
+    {
+        scoreText.SetText(score.ToString("0"));
+        comboText.SetText(combo.ToString("0.00"));
+    }
 }
