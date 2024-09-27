@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3590d41c3486104419d69b6249083fd9, type: 3}
-  m_Name: FruitData
+  m_Name: Bomb
   m_EditorClassIdentifier: 
-  rotateSelfSpeed: 47.3
-  Size: 2
-  FruitModel: {fileID: 7994198155845069283, guid: 5c025f0a91c7bfc48a7139460aae38fd, type: 3}
-  fruitValue: 3
-  fruitMultiplier: 0.1
+  rotateSelfSpeed: 22.4
+  Size: 1
+  FruitModel: {fileID: 1310495893471776500, guid: 0baa6cc6ef59a0a4fab317a6a2cc63ce, type: 3}
+  fruitValue: -10
+  fruitMultiplier: 0

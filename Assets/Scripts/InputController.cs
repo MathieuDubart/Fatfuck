@@ -19,13 +19,10 @@ public class InputController : BaseController<InputController>
                 //GameController.Instance().TogglePause();
 
         horizontalAxis = Input.GetAxis("Horizontal");
-
-    
-       
     }
 
-    // public void FixedUpdate()
-    // {
-    //     pm.MovePlayerWith(horizontalAxis);
-    // }
+    public void FixedUpdate()
+    {
+        pm.MovePlayerWith(horizontalAxis);
+    }
 }

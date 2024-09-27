@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 413250340679021909}
   - component: {fileID: 5413019425866472796}
   - component: {fileID: 3960027385784435174}
+  - component: {fileID: 2436691325756627280}
   m_Layer: 0
   m_Name: FatFuck
   m_TagString: Player
@@ -60,7 +61,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5346112070288159060}
@@ -78,7 +79,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b0496a15b135a4ebef43603825db53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   sidewayForce: 5
 --- !u!65 &3960027385784435174
 BoxCollider:
@@ -101,6 +101,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.9397366, y: 2.1505175, z: 1.9340482}
   m_Center: {x: 0.055408955, y: 0.57525873, z: 0.46702456}
+--- !u!54 &2436691325756627280
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4277962886459497200}
+  serializedVersion: 4
+  m_Mass: 1e+9
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2131699841305123579
 PrefabInstance:
   m_ObjectHideFlags: 0

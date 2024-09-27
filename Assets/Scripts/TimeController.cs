@@ -6,12 +6,10 @@ using TMPro;
 
 public class TimeController : BaseController<TimeController >
 
-
-
 {
     public TMPro.TextMeshProUGUI timerText;
     public float startTime = 60.0f;  // Starting time in seconds
-    private float currentTime;       // Current countdown time
+    public float currentTime;       // Current countdown time
 
 
     public delegate void TimeEvent();

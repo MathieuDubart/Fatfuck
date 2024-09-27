@@ -27,7 +27,7 @@ public class PlayerMovements : MonoBehaviour
 
     public void MovePlayerWith(float horizontalAxis)
     {
-        if ((this.gameObject.transform.position.x > pointLeft.x && horizontalAxis <= 0) || (this.gameObject.transform.position.x < pointRight.x && horizontalAxis >= 0))
+        if ((this.gameObject.transform.position.x > pointLeft.x && horizontalAxis <= 0) || (this.gameObject.transform.position.x < pointRight.x && horizontalAxis >= 0) && TimeController.Instance().currentTime > 0)
         {
             this.gameObject.transform.position += new Vector3(horizontalAxis * sidewayForce * Time.deltaTime, 0, 0);
         }
