@@ -12,8 +12,7 @@ public class FruitCollision : MonoBehaviour
         {
             ScoreController.Instance().IncrementScoreBy(parent.preset.fruitValue);
             ScoreController.Instance().IncrementComboWith(parent.preset.fruitMultiplier);
-            Debug.Log(ScoreController.Instance().score);
-            Debug.Log(ScoreController.Instance().combo);
+            TimeController.Instance().AddTime();
             parent.DestroyFruit();
 
         }
