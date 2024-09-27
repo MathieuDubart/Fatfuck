@@ -5,7 +5,7 @@ using System;
 public class Autorotate : MonoBehaviour
 {
 
-    public float speed = 0.01f;
+    public float speed = 500f;
 
    
     // Update is called once per frame

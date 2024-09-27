@@ -5,7 +5,7 @@ using UnityEngine;
 public class GenericFruit : MonoBehaviour
 {
     public FruitPreset preset;
-    public Autorotate BodyAutorotate;
+    
 
     public GameObject FruitChild;
 
@@ -30,15 +30,15 @@ public class GenericFruit : MonoBehaviour
     public void Init(FruitPreset newpreset)
     {
         this.preset = newpreset;
-        this.FruitChild = Instantiate(newpreset.FruitModel, BodyAutorotate.transform);
-        
+        this.FruitChild = Instantiate(newpreset.FruitModel, FruitChild.transform);
+        this.FruitChild.AddComponent<Autorotate>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.BodyAutorotate.gameObject.transform.localScale = Vector3.one * this.preset.Size;
-        this.BodyAutorotate.speed = preset.rotateSelfSpeed;
+        this.FruitChild.transform.localScale = Vector3.one * this.preset.Size;
+
         this.DestroyFruit();
 
     }

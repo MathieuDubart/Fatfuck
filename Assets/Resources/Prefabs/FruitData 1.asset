@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3590d41c3486104419d69b6249083fd9, type: 3}
-  m_Name: FruitData
+  m_Name: FruitData 1
   m_EditorClassIdentifier: 
   rotateSelfSpeed: 25.4
   Size: 0
