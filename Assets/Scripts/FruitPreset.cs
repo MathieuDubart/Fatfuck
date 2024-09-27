@@ -22,4 +22,8 @@ public class FruitPreset : ScriptableObject
     [Tooltip("Fruit combo multiplier")]
     [Range(0f,1f)]
     public float fruitMultiplier;
+
+    [Tooltip("Fruit time adding")]
+    [Range(-2f, 2f)]
+    public float fruitTimeAdding;
 }
