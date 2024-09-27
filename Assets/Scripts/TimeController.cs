@@ -82,6 +82,6 @@ public class TimeController : BaseController<TimeController >
 
     public void AddTime(int time)
     {
-
+        this.currentTime += (float)time;
     }
 }
