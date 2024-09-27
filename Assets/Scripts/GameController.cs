@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameController : BaseController<GameController>
 {
     public delegate void SpeedEvent(float newSpeed);
@@ -31,7 +31,8 @@ public class GameController : BaseController<GameController>
     public void Start()
     {
         InputController.Instance().OnTogglePause += TogglePause;
-        TimeController.Instance().OnTogglePause += TogglePause;
+        TimeController.Instance().OnGameEnded += this.EndGame;
+        UIController.Instance().OnRestartGame += this.RestartGame;
     }
 
     public void TogglePause()
@@ -66,11 +67,25 @@ public class GameController : BaseController<GameController>
         Time.timeScale = 0;
         this.simulationSpeed = 1;
         this.TogglePause();
+        Debug.Log("Game Over: Timer has reached 0.");
+
+        InputController.Instance().OnTogglePause -= TogglePause;
+
+
         // Additional game-over logic, such as stopping fruit spawning
         // or showing a game-over screen, can go here.
     }
 
-    
+    public void RestartGame(){
+          Debug.Log("Restarting game...");
+
+        // Reset time scale
+        Time.timeScale = 1;
+
+        // You can add additional logic here to reset the game state,
+        // such as resetting the player's position, score, etc.
+        SceneManager.LoadScene("MainScene");
+    }
 }
 
     
