@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerMovements : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
     [SerializeField] private float sidewayForce = 5f;
 
     Camera cam;
@@ -28,9 +27,9 @@ public class PlayerMovements : MonoBehaviour
 
     public void MovePlayerWith(float horizontalAxis)
     {
-        if ((player.transform.position.x > pointLeft.x && horizontalAxis <= 0) || (player.transform.position.x < pointRight.x && horizontalAxis >= 0))
+        if ((this.gameObject.transform.position.x > pointLeft.x && horizontalAxis <= 0) || (this.gameObject.transform.position.x < pointRight.x && horizontalAxis >= 0))
         {
-            player.transform.position += new Vector3(horizontalAxis * sidewayForce * Time.deltaTime, 0, 0);
+            this.gameObject.transform.position += new Vector3(horizontalAxis * sidewayForce * Time.deltaTime, 0, 0);
         }
     }
 

@@ -15,4 +15,4 @@ MonoBehaviour:
   rotateSelfSpeed: 25.4
   Size: 2
   FruitModel: {fileID: 7994198155845069283, guid: 5c025f0a91c7bfc48a7139460aae38fd, type: 3}
-  fruitValue: 0
+  fruitValue: 2
