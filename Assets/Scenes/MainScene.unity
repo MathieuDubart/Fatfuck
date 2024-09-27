@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 337998381}
-  startTime: 60
+  startTime: 5
   currentTime: 0
 --- !u!1 &275980665
 GameObject:

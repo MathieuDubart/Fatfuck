@@ -78,4 +78,9 @@ public class TimeController : BaseController<TimeController>
         // Format the time and display it
          timerText.text = string.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, milliseconds);
     }
+
+    public void AddTime(int time)
+    {
+        this.currentTime += (float)time;
+    }
 }
