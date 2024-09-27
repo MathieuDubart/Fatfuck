@@ -10,6 +10,10 @@ public class ObstacleSpawn : MonoBehaviour
     [SerializeField]
     private FruitPreset[] FruitPreset;
 
+
+    [SerializeField]
+    private GenericFruit FruitPrefab;
+
     [SerializeField]
     private float timeFirstWave = 0f;
 
@@ -42,9 +46,8 @@ public class ObstacleSpawn : MonoBehaviour
         int fruitIndex = Random.Range(0, FruitPreset.Length);
         int randomRotation = Random.Range(0,120);
   
-            
-            Instantiate(FruitPreset[fruitIndex].FruitModel, spawnPoints[randomIndex].position, Quaternion.Euler(new Vector3(0, 0, randomRotation)));
-           
+        GenericFruit generatedGO = Instantiate<GenericFruit>(FruitPrefab, spawnPoints[randomIndex].position, Quaternion.Euler(new Vector3(0, 0, randomRotation)));
+        generatedGO.Init(FruitPreset[fruitIndex]);
         
     }
 }
